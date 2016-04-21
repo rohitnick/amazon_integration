@@ -58,7 +58,7 @@ class Order
       payments: [{
         amount: @order_total,
         payment_method: 'Amazon',
-        status: 'complete'
+        status: 'completed'
       }],
       shipping_address: @shipping_address,
       # TODO: Should we even return the billing address?  We are only given a shipping address.
