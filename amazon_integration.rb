@@ -25,7 +25,8 @@ class AmazonIntegration < EndpointBase::Sinatra::Base
       @mws = Mws.connect(
         merchant: @config['merchant_id'],
         access:   @config['aws_access_key_id'],
-        secret:   @config['secret_key']
+        secret:   @config['secret_key'],
+        host:     @config['host']
       )
     end
   end
