@@ -130,6 +130,7 @@ class AmazonIntegration < EndpointBase::Sinatra::Base
       inventory_feed = @mws.feeds.inventory.update(
         Mws::Inventory(@payload['inventory']['product_id'],
           quantity: @payload['inventory']['quantity'],
+          fulfillment_latency: @payload['inventory']['fulfillment_latency'],
           fulfillment_type: :mfn
         )
       )
